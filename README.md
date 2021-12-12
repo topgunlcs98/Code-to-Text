@@ -3,7 +3,7 @@ Code2Text with decoder weights initialization.
 How to run:
 1. Upload dataset (https://github.com/microsoft/CodeXGLUE/tree/main/Code-Text/code-to-text)
 2. configurations:
-'''
+```
 lang='java' #programming language
 lr=5e-5
 batch_size=4
@@ -20,4 +20,4 @@ pretrained_model='microsoft/codebert-base'
 train_size=400
 test_size=20
 val_size=20
-'''
+```
