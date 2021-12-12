@@ -17,9 +17,9 @@ dev_file=data_dir + '/' + lang +'/valid.jsonl'
 test_file=data_dir + '/' + lang + '/test.jsonl'
 epochs=10
 pretrained_model='microsoft/codebert-base'
-train_size=400  ## new args: sample 400 data from train set
-test_size=20   ## new args: sample 20 data from test set
-val_size=20  ## new args: sample 20 data from 
+train_size=400  ## new args: sample 400 data from training set, load all the data when set it to 0
+test_size=20   ## new args: sample 20 data from test set, load all the data when set it to 0
+val_size=20  ## new args: sample 20 data from , load all the data when set it to 0
 ```
 
 3. Run
