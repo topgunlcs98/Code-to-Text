@@ -2,7 +2,7 @@
 Code2Text with decoder weights initialization.
 How to run:
 1. Upload dataset (https://github.com/microsoft/CodeXGLUE/tree/main/Code-Text/code-to-text)
-2. configurations:
+2. Configurations:
 ```
 lang='java' #programming language
 lr=5e-5
@@ -17,7 +17,12 @@ dev_file=data_dir + '/' + lang +'/valid.jsonl'
 test_file=data_dir + '/' + lang + '/test.jsonl'
 epochs=10
 pretrained_model='microsoft/codebert-base'
-train_size=400
-test_size=20
-val_size=20
+train_size=400  ## new args: sample 400 data from train set
+test_size=20   ## new args: sample 20 data from test set
+val_size=20  ## new args: sample 20 data from 
+```
+
+3. Run
+```
+python run.py --do_train --do_eval --do_test --model_type roberta --model_name_or_path $pretrained_model --train_filename $train_file --dev_filename $dev_file --test_filename $test_file --output_dir $output_dir --max_source_length $source_length --max_target_length $target_length --beam_size $beam_size --train_batch_size $batch_size --eval_batch_size $batch_size --learning_rate $lr --num_train_epochs $epochs --train_size $train_size --test_size $test_size --val_size $val_size
 ```
